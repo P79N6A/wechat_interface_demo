@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f58dc385ef44cfb9e5f2f0177e1b851" Name="Diagram1">
+        <EntityTypeShape EntityType="qds117733100_dbModel.wx_settings" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qds117733100_dbModel.wx_userinfo" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="qds117733100_dbModel.wx_menu_type" Width="1.5" PointX="9.4054323478627175" PointY="23.667728852325926" />
+        <EntityTypeShape EntityType="qds117733100_dbModel.wx_menu" Width="1.5" PointX="11.367698885205993" PointY="22.846905912667005" />
+        <EntityTypeShape EntityType="qds117733100_dbModel.vyw_wx_menu_type" Width="1.5" PointX="1.2622953677840045" PointY="11.387685781059641" />
+        <EntityTypeShape EntityType="qds117733100_dbModel.wx_log" Width="1.5" PointX="10.904153583061021" PointY="9.1883056802620668" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

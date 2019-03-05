@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="qds117733100_dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="qds117733100_dbModelStoreContainer">
+          <EntitySet Name="wx_log" EntityType="qds117733100_dbModel.Store.wx_log" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="wx_menu" EntityType="qds117733100_dbModel.Store.wx_menu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="wx_menu_type" EntityType="qds117733100_dbModel.Store.wx_menu_type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="wx_settings" EntityType="qds117733100_dbModel.Store.wx_settings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="wx_userinfo" EntityType="qds117733100_dbModel.Store.wx_userinfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vyw_wx_menu_type" EntityType="qds117733100_dbModel.Store.vyw_wx_menu_type" store:Type="Views" store:Schema="dbo" store:Name="vyw_wx_menu_type">
+            <DefiningQuery>SELECT 
+      [vyw_wx_menu_type].[name] AS [name], 
+      [vyw_wx_menu_type].[typeID] AS [typeID], 
+      [vyw_wx_menu_type].[remark] AS [remark], 
+      [vyw_wx_menu_type].[pID] AS [pID], 
+      [vyw_wx_menu_type].[addTime] AS [addTime], 
+      [vyw_wx_menu_type].[updateTime] AS [updateTime], 
+      [vyw_wx_menu_type].[ID] AS [ID], 
+      [vyw_wx_menu_type].[typeName] AS [typeName], 
+      [vyw_wx_menu_type].[typeValue] AS [typeValue]
+      FROM [dbo].[vyw_wx_menu_type] AS [vyw_wx_menu_type]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="wx_log">
+          <Key>
+            <PropertyRef Name="logID" />
+          </Key>
+          <Property Name="logID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="msg" Type="nvarchar(max)" />
+          <Property Name="addTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="remark" Type="nvarchar" Nullable="false" MaxLength="1024" />
+          <Property Name="pID" Type="int" Nullable="false" />
+          <Property Name="addTime" Type="datetime" />
+          <Property Name="updateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_menu_type">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Name="typeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="typeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="typeValue" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="addTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_settings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="appID" Type="nvarchar" MaxLength="50" />
+          <Property Name="appsecret" Type="nvarchar" MaxLength="50" />
+          <Property Name="access_token" Type="nvarchar" MaxLength="250" />
+          <Property Name="jsapi_ticket" Type="nvarchar" MaxLength="250" />
+          <Property Name="updateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="wx_userinfo">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="openid" Type="nvarchar" MaxLength="50" />
+          <Property Name="nickname" Type="nvarchar" MaxLength="50" />
+          <Property Name="sex" Type="int" />
+          <Property Name="province" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" />
+          <Property Name="headimgurl" Type="nvarchar" MaxLength="250" />
+          <Property Name="privilege" Type="nvarchar" Nullable="false" MaxLength="250" />
+          <Property Name="unionid" Type="nvarchar" MaxLength="50" />
+          <Property Name="addTime" Type="datetime" />
+          <Property Name="updateTime" Type="datetime" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“qds117733100_db.dbo.vyw_wx_menu_type”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="vyw_wx_menu_type">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="remark" />
+            <PropertyRef Name="pID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="typeName" />
+            <PropertyRef Name="typeValue" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="typeID" Type="int" Nullable="false" />
+          <Property Name="remark" Type="nvarchar" Nullable="false" MaxLength="1024" />
+          <Property Name="pID" Type="int" Nullable="false" />
+          <Property Name="addTime" Type="datetime" />
+          <Property Name="updateTime" Type="datetime" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="typeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="typeValue" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="qds117733100_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="wx_settings">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="appID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="appsecret" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="access_token" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="jsapi_ticket" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="updateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="qds117733100_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="wx_settings" EntityType="Self.wx_settings" />
+          <EntitySet Name="wx_userinfo" EntityType="qds117733100_dbModel.wx_userinfo" />
+          <EntitySet Name="wx_menu_type" EntityType="qds117733100_dbModel.wx_menu_type" />
+          <EntitySet Name="wx_menu" EntityType="qds117733100_dbModel.wx_menu" />
+          <EntitySet Name="vyw_wx_menu_type" EntityType="qds117733100_dbModel.vyw_wx_menu_type" />
+          <EntitySet Name="wx_log" EntityType="qds117733100_dbModel.wx_log" />
+        </EntityContainer>
+        <EntityType Name="wx_userinfo">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="openid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sex" Type="Int32" />
+          <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="headimgurl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="privilege" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="unionid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="addTime" Type="DateTime" Precision="3" />
+          <Property Name="updateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="wx_menu_type">
+          <Key>
+            <PropertyRef Name="typeID" />
+          </Key>
+          <Property Type="Int32" Name="typeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="typeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="typeValue" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="addTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="wx_menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="typeID" Nullable="false" />
+          <Property Type="String" Name="remark" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="pID" Nullable="false" />
+          <Property Type="DateTime" Name="addTime" Precision="3" />
+          <Property Type="DateTime" Name="updateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="vyw_wx_menu_type">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="typeID" />
+            <PropertyRef Name="remark" />
+            <PropertyRef Name="pID" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="typeName" />
+            <PropertyRef Name="typeValue" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="typeID" Nullable="false" />
+          <Property Type="String" Name="remark" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="pID" Nullable="false" />
+          <Property Type="DateTime" Name="addTime" Precision="3" />
+          <Property Type="DateTime" Name="updateTime" Precision="3" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="typeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="typeValue" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="wx_log">
+          <Key>
+            <PropertyRef Name="logID" />
+          </Key>
+          <Property Type="Int32" Name="logID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="msg" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="addTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="qds117733100_dbModelStoreContainer" CdmEntityContainer="qds117733100_dbEntities">
+          <EntitySetMapping Name="wx_settings">
+            <EntityTypeMapping TypeName="qds117733100_dbModel.wx_settings">
+              <MappingFragment StoreEntitySet="wx_settings">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="appID" ColumnName="appID" />
+                <ScalarProperty Name="appsecret" ColumnName="appsecret" />
+                <ScalarProperty Name="access_token" ColumnName="access_token" />
+                <ScalarProperty Name="jsapi_ticket" ColumnName="jsapi_ticket" />
+                <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_userinfo">
+            <EntityTypeMapping TypeName="qds117733100_dbModel.wx_userinfo">
+              <MappingFragment StoreEntitySet="wx_userinfo">
+                <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+                <ScalarProperty Name="addTime" ColumnName="addTime" />
+                <ScalarProperty Name="unionid" ColumnName="unionid" />
+                <ScalarProperty Name="privilege" ColumnName="privilege" />
+                <ScalarProperty Name="headimgurl" ColumnName="headimgurl" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="province" ColumnName="province" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="nickname" ColumnName="nickname" />
+                <ScalarProperty Name="openid" ColumnName="openid" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_menu_type">
+            <EntityTypeMapping TypeName="qds117733100_dbModel.wx_menu_type">
+              <MappingFragment StoreEntitySet="wx_menu_type">
+                <ScalarProperty Name="addTime" ColumnName="addTime" />
+                <ScalarProperty Name="typeValue" ColumnName="typeValue" />
+                <ScalarProperty Name="typeName" ColumnName="typeName" />
+                <ScalarProperty Name="typeID" ColumnName="typeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_menu">
+            <EntityTypeMapping TypeName="qds117733100_dbModel.wx_menu">
+              <MappingFragment StoreEntitySet="wx_menu">
+                <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+                <ScalarProperty Name="addTime" ColumnName="addTime" />
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="typeID" ColumnName="typeID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vyw_wx_menu_type">
+            <EntityTypeMapping TypeName="qds117733100_dbModel.vyw_wx_menu_type">
+              <MappingFragment StoreEntitySet="vyw_wx_menu_type">
+                <ScalarProperty Name="typeValue" ColumnName="typeValue" />
+                <ScalarProperty Name="typeName" ColumnName="typeName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+                <ScalarProperty Name="addTime" ColumnName="addTime" />
+                <ScalarProperty Name="pID" ColumnName="pID" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="typeID" ColumnName="typeID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="wx_log">
+            <EntityTypeMapping TypeName="qds117733100_dbModel.wx_log">
+              <MappingFragment StoreEntitySet="wx_log">
+                <ScalarProperty Name="addTime" ColumnName="addTime" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+                <ScalarProperty Name="logID" ColumnName="logID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

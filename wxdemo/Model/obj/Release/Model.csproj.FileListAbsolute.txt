@@ -1,0 +1,17 @@
+G:\mycase\wxdemo\wxdemo\Model\bin\Release\Model.dll.config
+G:\mycase\wxdemo\wxdemo\Model\bin\Release\Model.dll
+G:\mycase\wxdemo\wxdemo\Model\bin\Release\Model.pdb
+G:\mycase\wxdemo\wxdemo\Model\bin\Release\EntityFramework.dll
+G:\mycase\wxdemo\wxdemo\Model\bin\Release\EntityFramework.xml
+G:\mycase\wxdemo\wxdemo\Model\bin\Release\zh-Hans\EntityFramework.resources.dll
+G:\mycase\wxdemo\wxdemo\Model\obj\Release\Model.dll
+G:\mycase\wxdemo\wxdemo\Model\obj\Release\Model.pdb
+E:\mycase\wxdemo\wxdemo\Model\bin\Release\Model.dll.config
+E:\mycase\wxdemo\wxdemo\Model\bin\Release\Model.dll
+E:\mycase\wxdemo\wxdemo\Model\bin\Release\Model.pdb
+E:\mycase\wxdemo\wxdemo\Model\bin\Release\EntityFramework.dll
+E:\mycase\wxdemo\wxdemo\Model\bin\Release\EntityFramework.xml
+E:\mycase\wxdemo\wxdemo\Model\bin\Release\zh-Hans\EntityFramework.resources.dll
+E:\mycase\wxdemo\wxdemo\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+E:\mycase\wxdemo\wxdemo\Model\obj\Release\Model.dll
+E:\mycase\wxdemo\wxdemo\Model\obj\Release\Model.pdb

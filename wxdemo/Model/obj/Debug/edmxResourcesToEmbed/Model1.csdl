@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qds117733100_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="wx_settings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="appID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="appsecret" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="access_token" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="jsapi_ticket" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="updateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="qds117733100_dbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="wx_settings" EntityType="Self.wx_settings" />
+    <EntitySet Name="wx_userinfo" EntityType="qds117733100_dbModel.wx_userinfo" />
+    <EntitySet Name="wx_menu_type" EntityType="qds117733100_dbModel.wx_menu_type" />
+    <EntitySet Name="wx_menu" EntityType="qds117733100_dbModel.wx_menu" />
+    <EntitySet Name="vyw_wx_menu_type" EntityType="qds117733100_dbModel.vyw_wx_menu_type" />
+    <EntitySet Name="wx_log" EntityType="qds117733100_dbModel.wx_log" />
+  </EntityContainer>
+  <EntityType Name="wx_userinfo">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="openid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nickname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sex" Type="Int32" />
+    <Property Name="province" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="headimgurl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="privilege" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="unionid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="addTime" Type="DateTime" Precision="3" />
+    <Property Name="updateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="wx_menu_type">
+    <Key>
+      <PropertyRef Name="typeID" />
+    </Key>
+    <Property Type="Int32" Name="typeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="typeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="typeValue" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="addTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="wx_menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="typeID" Nullable="false" />
+    <Property Type="String" Name="remark" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="pID" Nullable="false" />
+    <Property Type="DateTime" Name="addTime" Precision="3" />
+    <Property Type="DateTime" Name="updateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="vyw_wx_menu_type">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="typeID" />
+      <PropertyRef Name="remark" />
+      <PropertyRef Name="pID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="typeName" />
+      <PropertyRef Name="typeValue" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="typeID" Nullable="false" />
+    <Property Type="String" Name="remark" Nullable="false" MaxLength="1024" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="pID" Nullable="false" />
+    <Property Type="DateTime" Name="addTime" Precision="3" />
+    <Property Type="DateTime" Name="updateTime" Precision="3" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="typeName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="typeValue" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="wx_log">
+    <Key>
+      <PropertyRef Name="logID" />
+    </Key>
+    <Property Type="Int32" Name="logID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="msg" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="addTime" Precision="3" />
+  </EntityType>
+</Schema>

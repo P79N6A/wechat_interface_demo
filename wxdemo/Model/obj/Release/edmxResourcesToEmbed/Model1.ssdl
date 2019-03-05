@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="qds117733100_dbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="qds117733100_dbModelStoreContainer">
+    <EntitySet Name="wx_log" EntityType="qds117733100_dbModel.Store.wx_log" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="wx_menu" EntityType="qds117733100_dbModel.Store.wx_menu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="wx_menu_type" EntityType="qds117733100_dbModel.Store.wx_menu_type" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="wx_settings" EntityType="qds117733100_dbModel.Store.wx_settings" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="wx_userinfo" EntityType="qds117733100_dbModel.Store.wx_userinfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vyw_wx_menu_type" EntityType="qds117733100_dbModel.Store.vyw_wx_menu_type" store:Type="Views" store:Schema="dbo" store:Name="vyw_wx_menu_type">
+      <DefiningQuery>SELECT 
+      [vyw_wx_menu_type].[name] AS [name], 
+      [vyw_wx_menu_type].[typeID] AS [typeID], 
+      [vyw_wx_menu_type].[remark] AS [remark], 
+      [vyw_wx_menu_type].[pID] AS [pID], 
+      [vyw_wx_menu_type].[addTime] AS [addTime], 
+      [vyw_wx_menu_type].[updateTime] AS [updateTime], 
+      [vyw_wx_menu_type].[ID] AS [ID], 
+      [vyw_wx_menu_type].[typeName] AS [typeName], 
+      [vyw_wx_menu_type].[typeValue] AS [typeValue]
+      FROM [dbo].[vyw_wx_menu_type] AS [vyw_wx_menu_type]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="wx_log">
+    <Key>
+      <PropertyRef Name="logID" />
+    </Key>
+    <Property Name="logID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="msg" Type="nvarchar(max)" />
+    <Property Name="addTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_menu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="typeID" Type="int" Nullable="false" />
+    <Property Name="remark" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="pID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" />
+    <Property Name="updateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_menu_type">
+    <Key>
+      <PropertyRef Name="typeID" />
+    </Key>
+    <Property Name="typeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="typeValue" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="addTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_settings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="appID" Type="nvarchar" MaxLength="50" />
+    <Property Name="appsecret" Type="nvarchar" MaxLength="50" />
+    <Property Name="access_token" Type="nvarchar" MaxLength="250" />
+    <Property Name="jsapi_ticket" Type="nvarchar" MaxLength="250" />
+    <Property Name="updateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="wx_userinfo">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="openid" Type="nvarchar" MaxLength="50" />
+    <Property Name="nickname" Type="nvarchar" MaxLength="50" />
+    <Property Name="sex" Type="int" />
+    <Property Name="province" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="headimgurl" Type="nvarchar" MaxLength="250" />
+    <Property Name="privilege" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="unionid" Type="nvarchar" MaxLength="50" />
+    <Property Name="addTime" Type="datetime" />
+    <Property Name="updateTime" Type="datetime" />
+  </EntityType>
+  <!--生成过程中发现错误:
+      警告 6002: 表/视图“qds117733100_db.dbo.vyw_wx_menu_type”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+  <EntityType Name="vyw_wx_menu_type">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="typeID" />
+      <PropertyRef Name="remark" />
+      <PropertyRef Name="pID" />
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="typeName" />
+      <PropertyRef Name="typeValue" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="typeID" Type="int" Nullable="false" />
+    <Property Name="remark" Type="nvarchar" Nullable="false" MaxLength="1024" />
+    <Property Name="pID" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" />
+    <Property Name="updateTime" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="typeName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="typeValue" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="qds117733100_dbModelStoreContainer" CdmEntityContainer="qds117733100_dbEntities">
+    <EntitySetMapping Name="wx_settings">
+      <EntityTypeMapping TypeName="qds117733100_dbModel.wx_settings">
+        <MappingFragment StoreEntitySet="wx_settings">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="appID" ColumnName="appID" />
+          <ScalarProperty Name="appsecret" ColumnName="appsecret" />
+          <ScalarProperty Name="access_token" ColumnName="access_token" />
+          <ScalarProperty Name="jsapi_ticket" ColumnName="jsapi_ticket" />
+          <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_userinfo">
+      <EntityTypeMapping TypeName="qds117733100_dbModel.wx_userinfo">
+        <MappingFragment StoreEntitySet="wx_userinfo">
+          <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="unionid" ColumnName="unionid" />
+          <ScalarProperty Name="privilege" ColumnName="privilege" />
+          <ScalarProperty Name="headimgurl" ColumnName="headimgurl" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="province" ColumnName="province" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="openid" ColumnName="openid" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_menu_type">
+      <EntityTypeMapping TypeName="qds117733100_dbModel.wx_menu_type">
+        <MappingFragment StoreEntitySet="wx_menu_type">
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="typeValue" ColumnName="typeValue" />
+          <ScalarProperty Name="typeName" ColumnName="typeName" />
+          <ScalarProperty Name="typeID" ColumnName="typeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_menu">
+      <EntityTypeMapping TypeName="qds117733100_dbModel.wx_menu">
+        <MappingFragment StoreEntitySet="wx_menu">
+          <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="typeID" ColumnName="typeID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vyw_wx_menu_type">
+      <EntityTypeMapping TypeName="qds117733100_dbModel.vyw_wx_menu_type">
+        <MappingFragment StoreEntitySet="vyw_wx_menu_type">
+          <ScalarProperty Name="typeValue" ColumnName="typeValue" />
+          <ScalarProperty Name="typeName" ColumnName="typeName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="updateTime" ColumnName="updateTime" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="typeID" ColumnName="typeID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="wx_log">
+      <EntityTypeMapping TypeName="qds117733100_dbModel.wx_log">
+        <MappingFragment StoreEntitySet="wx_log">
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+          <ScalarProperty Name="logID" ColumnName="logID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

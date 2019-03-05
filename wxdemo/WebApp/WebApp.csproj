@@ -1,0 +1,1796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{317EE946-5447-4AC6-B238-F43461B6BE09}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>E:\项目文件\视频\bishe\BookShop\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.3990.25764, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\sm-extend.min.css" />
+    <Content Include="css\sm.min.css" />
+    <Content Include="css\swiper.min.css" />
+    <Content Include="dialogue.aspx" />
+    <Content Include="fonts\font_1433401008_2229297.svg" />
+    <Content Include="function.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="handler\baseHandler.aspx" />
+    <Content Include="handler\dialogueHandler.aspx" />
+    <Content Include="handler\functionHandler.aspx" />
+    <Content Include="handler\paywayHandler.aspx" />
+    <Content Include="images\face.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\jquery-1.8.2.js" />
+    <Content Include="js\jquery-1.8.2.min.js" />
+    <Content Include="js\sm-extend.min.js" />
+    <Content Include="js\sm.min.js" />
+    <Content Include="js\swiper.min.js" />
+    <Content Include="js\zepto.min.js" />
+    <Content Include="lib\ThoughtWorks.QRCode.dll" />
+    <Content Include="member.aspx" />
+    <Content Include="page\dialogue\createqrcode.aspx" />
+    <Content Include="page\dialogue\getallmateriallist.aspx" />
+    <Content Include="page\dialogue\mass.aspx" />
+    <Content Include="page\dialogue\masssendresult.aspx" />
+    <Content Include="page\dialogue\massuploadimgtexturl.aspx" />
+    <Content Include="page\dialogue\materialmanager.aspx" />
+    <Content Include="page\dialogue\materialpermanentadd.aspx" />
+    <Content Include="page\dialogue\myaddressinfo.aspx" />
+    <Content Include="page\dialogue\userbaseinfo.aspx" />
+    <Content Include="page\dialogue\menu.aspx" />
+    <Content Include="page\dialogue\menuaddone.aspx" />
+    <Content Include="page\dialogue\menuaddtwo.aspx" />
+    <Content Include="page\dialogue\menulist.aspx" />
+    <Content Include="page\dialogue\menueditone.aspx" />
+    <Content Include="page\dialogue\menuedittwo.aspx" />
+    <Content Include="page\dialogue\long2short.aspx" />
+    <Content Include="page\dialogue\customersend.aspx" />
+    <Content Include="page\dialogue\selectallusergroup.aspx" />
+    <Content Include="page\dialogue\usergroupmanager.aspx" />
+    <Content Include="page\dialogue\selectcurrentusergroup.aspx" />
+    <Content Include="page\dialogue\updateusergroup.aspx" />
+    <Content Include="page\dialogue\moveusergroup.aspx" />
+    <Content Include="page\dialogue\movecurrentusergroup.aspx" />
+    <Content Include="page\dialogue\updateuserremark.aspx" />
+    <Content Include="page\dialogue\getuserbaseinfo.aspx" />
+    <Content Include="page\dialogue\getuserlist.aspx" />
+    <Content Include="page\dialogue\getallmateriallistdetail.aspx" />
+    <Content Include="page\dialogue\materialtemporaryadd.aspx" />
+    <Content Include="page\dialogue\getmaterialtemporary.aspx" />
+    <Content Include="page\dialogue\materialotherpermanentadd.aspx" />
+    <Content Include="page\dialogue\getmaterialall.aspx" />
+    <Content Include="page\dialogue\getmaterialpermanent.aspx" />
+    <Content Include="page\dialogue\getmaterialpermanentlist.aspx" />
+    <Content Include="page\dialogue\materialpermanentdelete.aspx" />
+    <Content Include="page\dialogue\materialpermanentedit.aspx" />
+    <Content Include="page\dialogue\massuploadimgtext.aspx" />
+    <Content Include="page\dialogue\massgroupsend.aspx" />
+    <Content Include="page\dialogue\massopenidsend.aspx" />
+    <Content Include="page\dialogue\massgroupsenddelete.aspx" />
+    <Content Include="page\dialogue\masspreview.aspx" />
+    <Content Include="page\dialogue\massselectgroupsend.aspx" />
+    <Content Include="page\dialogue\templatemessage.aspx" />
+    <Content Include="page\function\morecustomerservice.aspx" />
+    <Content Include="page\function\customerservicemanager.aspx" />
+    <Content Include="page\webpage\makeqrcode.aspx" />
+    <Content Include="page\webpage\nativepay.aspx" />
+    <Content Include="page\webpage\notify.aspx" />
+    <Content Include="page\webpage\qrcode.aspx" />
+    <Content Include="page\webpage\share.aspx" />
+    <Content Include="page\webpage\supportjs.aspx" />
+    <Content Include="page\webpage\imagejs.aspx" />
+    <Content Include="valid.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="webpage.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alipay\AlipayConstants.cs" />
+    <Compile Include="alipay\AlipayUserUserinfoShareRequest.cs" />
+    <Compile Include="alipay\AlipayUserUserinfoShareResponse.cs" />
+    <Compile Include="alipay\AopDictionary.cs" />
+    <Compile Include="alipay\AopException.cs" />
+    <Compile Include="alipay\AopObject.cs" />
+    <Compile Include="alipay\AopResponse.cs" />
+    <Compile Include="alipay\DefaultAopClient.cs" />
+    <Compile Include="alipay\Domain\AccountFreeze.cs" />
+    <Compile Include="alipay\Domain\AccountRecord.cs" />
+    <Compile Include="alipay\Domain\ActivityAuditDTO.cs" />
+    <Compile Include="alipay\Domain\ActivityOrderDTO.cs" />
+    <Compile Include="alipay\Domain\AdviceVO.cs" />
+    <Compile Include="alipay\Domain\AlipayAccount.cs" />
+    <Compile Include="alipay\Domain\AlipayAccountExrateAdviceAcceptModel.cs" />
+    <Compile Include="alipay\Domain\AlipayAccountExrateAllclientrateQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayAccountExratePricingNotifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayAccountExrateRatequeryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayAssetPointAccountlogQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayAssetPointOrderCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayAssetPointOrderQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossBaseProcessInstanceCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossBaseProcessInstanceCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossBaseProcessInstanceQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossBaseProcessTaskProcessModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossCsChannelQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossCsDatacollectSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossProdSubmerchantCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossProdSubmerchantModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayBossProdSubmerchantQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayChinareModelResult.cs" />
+    <Compile Include="alipay\Domain\AlipayCodeRecoResult.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorDepositCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorDepositConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorDepositQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorFunctionQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorScriptQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorStationQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherGenerateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceCityfacilitatorVoucherUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceDataSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceMedicalCardQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceMedicalInstcardBindModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceMedicalInstcardCreateandpayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceTransportOfflinepayRecordVerifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceTransportOfflinepayTradeSettleModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCommerceTransportOfflinepayUserblacklistQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayContract.cs" />
+    <Compile Include="alipay\Domain\AlipayCreditAutofinanceLoanApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCreditAutofinanceLoanCloseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCreditAutofinanceLoanPlanQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCreditAutofinanceVidGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayCreditCreditriskDataPutModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderRefuseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderSpModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiOrderTransferModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiServiceModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiServicePriceModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiSpModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDaoweiSpScheduleModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataexchangeSfasdfModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataserviceBillDownloadurlQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataserviceChinaremodelQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataserviceCodeRecoModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataserviceUserlevelZrankGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataserviceYuebaoassetDetailSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataDataserviceYuebaolqdDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayDataItemDescription.cs" />
+    <Compile Include="alipay\Domain\AlipayDataItemGoodsList.cs" />
+    <Compile Include="alipay\Domain\AlipayDataItemLimitPeriodInfo.cs" />
+    <Compile Include="alipay\Domain\AlipayDataItemSalesRule.cs" />
+    <Compile Include="alipay\Domain\AlipayDataItemVoucherTemplete.cs" />
+    <Compile Include="alipay\Domain\AlipayDataServiceResult.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppInvoiceInfoGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppInvoiceSycnModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppInvoiceTitleBatchqueryInnerModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppInvoiceTitleDynamicGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppInvoiceTitleListGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppInvoiceUserTradeQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppIsvProdmodeCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppPdeductAsyncPayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppPdeductSignQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppPdeductSignValidateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeChargeoffinstQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeDropdataQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeInstshortnameQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeProvcityQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeReconconfQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeSignQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeTasknodeQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEbppProdmodeUnionbankQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCmsCdataUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBasicserviceInitializeModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBasicserviceModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBillBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBillBatchUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBillDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBillModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeBillSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeCommunityBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeCommunityCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeCommunityDetailsQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeCommunityModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeNoticeDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeNoticePublishModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeRepairStatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeResidentinfoDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeResidentinfoUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeRoominfoDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeRoominfoQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeRoominfoUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeRooominfoQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoCplifeUseridentityStatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoEduJzApplyresultSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoEduJzPostPublishModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoEduKtBillingModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoEduKtBillingSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoEduKtSchoolinfoModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMedicalcareCommonDataSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMedicalcareCommonTpcardNotifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMedicalcareHosRegnotifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMedicalcareHosReportnotifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarCarlibInfoPushModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDataExternalQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDataExternalSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDataserviceMaintainvehicleShareModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDataserviceViolationinfoShareModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDialogonlineAnswererUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDialogonlineAnswerPushModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarDialogonlineVehicleQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarImageUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainAftersaleSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainBizorderCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainBizorderstatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainBizorderUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainDataUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainOrderCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainOrderserverNotifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainOrderstatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainServiceproductUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainShopCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainShopDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainShopModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMaintainShopQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarMerchantshopCommentBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarOrderRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingAgreementQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingCardbarcodeCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingCardidQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingEnterinfoSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingExitinfoSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingLotbarcodeCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingOrderPayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingOrderRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingOrderstatusQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingOrderSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingOrderUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingParkinglotinfoCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingParkinglotinfoUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarParkingVehicleQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarPromoTicketPushModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarPromoTicketSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarPromoVoucherVerifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarTradeOrderQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarTradeRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarViolationCityPushModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoMycarViolationInfoPushModel.cs" />
+    <Compile Include="alipay\Domain\AlipayEcoWelfareCodeSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundAuthOperationCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundAuthOperationDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundAuthOrderFreezeModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundAuthOrderUnfreezeModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundCouponOperationQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundCouponOrderAgreementPayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundCouponOrderAppPayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundCouponOrderDisburseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundCouponOrderPagePayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundCouponOrderRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransBatchCreateorderModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransBatchCreatesinglebatchModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransBatchQuerybatchModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransDishonorQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransOrderQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransThirdpartyRewardCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransThirdpartyRewardQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransToaccountTransferModel.cs" />
+    <Compile Include="alipay\Domain\AlipayFundTransTobankTransferModel.cs" />
+    <Compile Include="alipay\Domain\AlipayHighValueCustomerResult.cs" />
+    <Compile Include="alipay\Domain\AlipayInsAutoCarSaveModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsCooperationProductQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingCampaignDecisionModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingCampaignPrizeSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingCampaignQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingCertificateBatchcreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingCertificateBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingDiscountDecisionModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingDiscountPreuseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsMarketingSellerSignModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneApplicationApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneApplicationBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneApplicationCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneApplicationGroupApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneApplicationIssueConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneApplicationQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneClaimApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneCouponReceiveModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneCouponSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsScenePolicyEndorseApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsScenePolicySurrenderApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneProductSignConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsSceneProductSignQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayInsUnderwritePolicyQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayItemAuditRule.cs" />
+    <Compile Include="alipay\Domain\AlipayItemDescription.cs" />
+    <Compile Include="alipay\Domain\AlipayItemGoodsList.cs" />
+    <Compile Include="alipay\Domain\AlipayItemLimitPeriodInfo.cs" />
+    <Compile Include="alipay\Domain\AlipayItemOperationContext.cs" />
+    <Compile Include="alipay\Domain\AlipayItemSalesRule.cs" />
+    <Compile Include="alipay\Domain\AlipayItemVoucherTemplete.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignActivityOfflineCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignActivityOfflineTriggerModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignCashCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignCashDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignCashListQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignCashStatusModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignCashTriggerModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignCertCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountBudgetAppendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountBudgetCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountBudgetQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountOperateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountStatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountWhitelistQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDiscountWhitelistUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDrawcampCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDrawcampQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDrawcampStatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDrawcampTriggerModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDrawcampUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignDrawcampWhitelistCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignPrizeAmountQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignRuleCrowdCountModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignRuleCrowdCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignRuleCrowdDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignRuleCrowdQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignRuleRulelistQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCampaignRuleTagQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardConsumeSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardOpenApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardOpenModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardTemplateCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardTemplateModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardTemplateQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCardUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCdpAdvertiseCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCdpAdvertiseModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCdpAdvertiseOperateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCdpAdvertiseQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCdpAdvertiseReportQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingCdpRecommendQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingDataDashboardApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingDataDashboardBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingDataDashboardCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingDataDashboardQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingSharetokenCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingSharetokenDecodeModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingToolFengdieActivityCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingToolFengdieActivityQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingToolFengdieEditorQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMarketingToolFengdieTemplateQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMsaasMediarecogVoiceMediaaudioUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayMsaasPromotionCpainfoCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketApplyorderBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketExpensePostModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketingVoucherCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketingVoucherModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketingVoucherOfflineModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketingVoucherStatusQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketingVoucherUseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketItemCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketItemModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketItemStateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketLeadsBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketLeadsClaimModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketLeadsCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketLeadsModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketLeadsQrcodeQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketLeadsReleaseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketMcommentQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketProductBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketProductQuerydetailModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketReportGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopApplyorderCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopAssignstaffModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopCategoryQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopDiscountQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopQuerydetailModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineMarketShopSummaryBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflinePayMasterKey.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderDishQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderEquipmentAuthQuerybypageModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderEquipmentAuthRemoveModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderMonitorLogSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderQuerystaffModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderShopactionRecordModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderStaffUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineProviderUseractionRecordModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsClaimstatusModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsContractconfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsInfoAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsInfoQuerybypageModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsMerchantEquipmentQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineSaleleadsQuerybyidsModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineTrade.cs" />
+    <Compile Include="alipay\Domain\AlipayOfflineTradeResult.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenAppCodetesttestModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenAppMsgDingSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenAppPackagetestModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenAuthIndustryPlatformCreateTokenModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenAuthTokenAppModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenAuthTokenAppQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicAccountCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicAccountDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicAccountQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicAccountResetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicFollowBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicGisQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicInfoModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLabelCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLabelDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLabelModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLabelUserCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLabelUserDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLabelUserQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicLifeMsgRecallModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicMenuCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicMenuModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicMessageCustomSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicMessageLabelSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicMessageSingleSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicMessageTotalSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicPartnerMenuOperateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicPartnerMenuQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicPartnerSubscribeSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicQrcodeCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicShortlinkCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicTemplateMessageGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicTemplateMessageIndustryModifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenPublicThirdCustomerServiceModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketCommodityAuditConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketCommodityExtendinfosAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketCommodityExtendinfosConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketCommodityQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketCommodityShopOfflineModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketCommodityShopOnlineModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketOrderAcceptModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketOrderItemCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketOrderItemCompleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketOrderItemConfirmModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketOrderQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayOpenServicemarketOrderRejectModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPassInstanceAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPassInstanceUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPassTemplateAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPassTemplateUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPcreditLoanApplyCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPcreditLoanRefundCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayPlatformUseridGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityDataInfoMobilecityQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityDataInfoSecuritydataQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdAlipaySecurityProdTestModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdAmlriskQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFacepayUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFacepayVerifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFacerepoAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFacerepoSearchModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFingerprintApplyInitializeModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFingerprintApplyModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFingerprintDeleteModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFingerprintVerifyInitializeModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdFingerprintVerifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdIrisCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityProdIrisVerifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskContentAnalyzeModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskContentResultGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskCustomerriskrankGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskDirectionalIpprofileQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskDirectionalRainscoreQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskHideDeviceidQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskMobileactivityQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySecurityRiskRainscoreQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseChatSendModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseGroupCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseGroupmemberAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseGroupQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseMcommentNewbornQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseMcommentNewsfeedAddModel.cs" />
+    <Compile Include="alipay\Domain\AlipaySocialBaseRelationFriendsQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeAppMergePayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeAppPayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeBatchRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeBatchRefundQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeCancelModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeCloseModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeCustomsDeclareModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeCustomsQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeFastpayRefundQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeMergePrecreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeOrderSettleModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradePageMergePayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradePagePayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradePayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradePrecreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeVendorpayDevicedataUploadModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeWapMergePayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayTradeWapPayModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserAccountInstitutionCertifyModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserAntpaasTokenCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserAntpaasTokenThirdTrustLoginModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserAntpaasUseridGetModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserBenefitCreateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserBenefitEditModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserBenefitStatusUpdateModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserCertDocDrivingLicense.cs" />
+    <Compile Include="alipay\Domain\AlipayUserCertDocVehicleLicense.cs" />
+    <Compile Include="alipay\Domain\AlipayUserCreditCard.cs" />
+    <Compile Include="alipay\Domain\AlipayUserDeliverAddress.cs" />
+    <Compile Include="alipay\Domain\AlipayUserDetail.cs" />
+    <Compile Include="alipay\Domain\AlipayUserFinanceinfoShareModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserGradeAuthbaseQueryModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserInfoAuthModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserLevelInfo.cs" />
+    <Compile Include="alipay\Domain\AlipayUserPicture.cs" />
+    <Compile Include="alipay\Domain\AlipayUserPointDeductModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserPointRefundModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserUnicomCardInfoSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayUserUnicomOrderInfoSyncModel.cs" />
+    <Compile Include="alipay\Domain\AlipayYebLqdDataResult.cs" />
+    <Compile Include="alipay\Domain\AlipayZmScoreZrankResult.cs" />
+    <Compile Include="alipay\Domain\AlisisReport.cs" />
+    <Compile Include="alipay\Domain\AlisisReportColumn.cs" />
+    <Compile Include="alipay\Domain\AlisisReportRow.cs" />
+    <Compile Include="alipay\Domain\AliTrustAlipayCert.cs" />
+    <Compile Include="alipay\Domain\AliTrustCert.cs" />
+    <Compile Include="alipay\Domain\AliTrustRiskIdentify.cs" />
+    <Compile Include="alipay\Domain\AliTrustRiskUser.cs" />
+    <Compile Include="alipay\Domain\AliTrustScore.cs" />
+    <Compile Include="alipay\Domain\AlmReportData.cs" />
+    <Compile Include="alipay\Domain\AntMerchantExpandEnterpriseApplyModel.cs" />
+    <Compile Include="alipay\Domain\AntMerchantExpandMapplyorderQueryModel.cs" />
+    <Compile Include="alipay\Domain\AntMerchantExpandPersonalApplyModel.cs" />
+    <Compile Include="alipay\Domain\AntProdpaasArrangementCommonQueryModel.cs" />
+    <Compile Include="alipay\Domain\AntProdpaasArrangementRebateRateQueryModel.cs" />
+    <Compile Include="alipay\Domain\AntProdpaasProductCommonQueryModel.cs" />
+    <Compile Include="alipay\Domain\ApproveCreditResult.cs" />
+    <Compile Include="alipay\Domain\AreaInfo.cs" />
+    <Compile Include="alipay\Domain\ArrangementBaseSelector.cs" />
+    <Compile Include="alipay\Domain\ArrangementBaseVO.cs" />
+    <Compile Include="alipay\Domain\ArrangementConditionGroupSelector.cs" />
+    <Compile Include="alipay\Domain\ArrangementInvolvedPartyQuerier.cs" />
+    <Compile Include="alipay\Domain\ArrangementNoQuerier.cs" />
+    <Compile Include="alipay\Domain\ArrangementOpenQueryResultVO.cs" />
+    <Compile Include="alipay\Domain\ArrangementVORes.cs" />
+    <Compile Include="alipay\Domain\Article.cs" />
+    <Compile Include="alipay\Domain\ArticleParagraph.cs" />
+    <Compile Include="alipay\Domain\ArticlePicture.cs" />
+    <Compile Include="alipay\Domain\AssetAccountResult.cs" />
+    <Compile Include="alipay\Domain\AssuranceInfo.cs" />
+    <Compile Include="alipay\Domain\BankPayApplyResult.cs" />
+    <Compile Include="alipay\Domain\BaseInfo.cs" />
+    <Compile Include="alipay\Domain\BatchFundItemAOPModel.cs" />
+    <Compile Include="alipay\Domain\BatchRefundDetailResult.cs" />
+    <Compile Include="alipay\Domain\BeaconDeviceInfo.cs" />
+    <Compile Include="alipay\Domain\BeaconTemplate.cs" />
+    <Compile Include="alipay\Domain\BenefitGradePoint.cs" />
+    <Compile Include="alipay\Domain\BenefitInfo.cs" />
+    <Compile Include="alipay\Domain\BenefitInfoDetail.cs" />
+    <Compile Include="alipay\Domain\BizListDataInfo.cs" />
+    <Compile Include="alipay\Domain\BizOrderQueryResponse.cs" />
+    <Compile Include="alipay\Domain\BPOpenApiAddSignContent.cs" />
+    <Compile Include="alipay\Domain\BPOpenApiInstance.cs" />
+    <Compile Include="alipay\Domain\BPOpenApiPUID.cs" />
+    <Compile Include="alipay\Domain\BPOpenApiTask.cs" />
+    <Compile Include="alipay\Domain\BudgetInfo.cs" />
+    <Compile Include="alipay\Domain\BusinessBankAccountInfo.cs" />
+    <Compile Include="alipay\Domain\BusinessLicenceInfo.cs" />
+    <Compile Include="alipay\Domain\ButtonObject.cs" />
+    <Compile Include="alipay\Domain\CalendarScheduleInfo.cs" />
+    <Compile Include="alipay\Domain\CampBaseDto.cs" />
+    <Compile Include="alipay\Domain\CampDetail.cs" />
+    <Compile Include="alipay\Domain\CardBinVO.cs" />
+    <Compile Include="alipay\Domain\CardDomainVO.cs" />
+    <Compile Include="alipay\Domain\CardInfo.cs" />
+    <Compile Include="alipay\Domain\CardTypeVO.cs" />
+    <Compile Include="alipay\Domain\CardUserInfo.cs" />
+    <Compile Include="alipay\Domain\CascadeMissionConfModel.cs" />
+    <Compile Include="alipay\Domain\CashCampaignInfo.cs" />
+    <Compile Include="alipay\Domain\ChargeInstMode.cs" />
+    <Compile Include="alipay\Domain\ChargeItems.cs" />
+    <Compile Include="alipay\Domain\CityFunction.cs" />
+    <Compile Include="alipay\Domain\ClaimProgress.cs" />
+    <Compile Include="alipay\Domain\ClauseTerm.cs" />
+    <Compile Include="alipay\Domain\CodeCouponInfo.cs" />
+    <Compile Include="alipay\Domain\CodeInfo.cs" />
+    <Compile Include="alipay\Domain\CodeNOList.cs" />
+    <Compile Include="alipay\Domain\CommentOpenModel.cs" />
+    <Compile Include="alipay\Domain\CommentReplyOpenModel.cs" />
+    <Compile Include="alipay\Domain\CommodityExtInfoConfirm.cs" />
+    <Compile Include="alipay\Domain\CommodityPublicExtInfos.cs" />
+    <Compile Include="alipay\Domain\CommonDescInfo.cs" />
+    <Compile Include="alipay\Domain\ComplextMockModel.cs" />
+    <Compile Include="alipay\Domain\Condition.cs" />
+    <Compile Include="alipay\Domain\ConstraintInfo.cs" />
+    <Compile Include="alipay\Domain\ConsumeInfo.cs" />
+    <Compile Include="alipay\Domain\ConsumeRecordAOPModel.cs" />
+    <Compile Include="alipay\Domain\ContactFollower.cs" />
+    <Compile Include="alipay\Domain\ContactPersonInfo.cs" />
+    <Compile Include="alipay\Domain\ContentPicture.cs" />
+    <Compile Include="alipay\Domain\Context.cs" />
+    <Compile Include="alipay\Domain\Contract.cs" />
+    <Compile Include="alipay\Domain\Coupon.cs" />
+    <Compile Include="alipay\Domain\CPAliveBillEntrySet.cs" />
+    <Compile Include="alipay\Domain\CPBillModifySet.cs" />
+    <Compile Include="alipay\Domain\CPBillResultSet.cs" />
+    <Compile Include="alipay\Domain\CPBillSet.cs" />
+    <Compile Include="alipay\Domain\CPCommServices.cs" />
+    <Compile Include="alipay\Domain\CPCommunitySet.cs" />
+    <Compile Include="alipay\Domain\CplifeNoticeDetail.cs" />
+    <Compile Include="alipay\Domain\CplifeNoticeImg.cs" />
+    <Compile Include="alipay\Domain\CplifeResidentInfo.cs" />
+    <Compile Include="alipay\Domain\CplifeRoomDetail.cs" />
+    <Compile Include="alipay\Domain\CplifeRoomInfo.cs" />
+    <Compile Include="alipay\Domain\CplifeRoomInfoResp.cs" />
+    <Compile Include="alipay\Domain\CraftsmanAssessment.cs" />
+    <Compile Include="alipay\Domain\CraftsmanOpenModel.cs" />
+    <Compile Include="alipay\Domain\CraftsmanShopRelationOpenModel.cs" />
+    <Compile Include="alipay\Domain\CraftsmanSubAssessment.cs" />
+    <Compile Include="alipay\Domain\CraftsmanWorkCreateOpenModel.cs" />
+    <Compile Include="alipay\Domain\CraftsmanWorkOpenModel.cs" />
+    <Compile Include="alipay\Domain\CraftsmanWorkOutIdOpenModel.cs" />
+    <Compile Include="alipay\Domain\CreditResult.cs" />
+    <Compile Include="alipay\Domain\CrowdRuleInfo.cs" />
+    <Compile Include="alipay\Domain\CustomerEntity.cs" />
+    <Compile Include="alipay\Domain\CustomerTag.cs" />
+    <Compile Include="alipay\Domain\CustomReportCondition.cs" />
+    <Compile Include="alipay\Domain\CustomsDeclareBuyerInfo.cs" />
+    <Compile Include="alipay\Domain\CustomsDeclareRecordInfo.cs" />
+    <Compile Include="alipay\Domain\CustomTagInfo.cs" />
+    <Compile Include="alipay\Domain\DashBoardMeta.cs" />
+    <Compile Include="alipay\Domain\DashboardParam.cs" />
+    <Compile Include="alipay\Domain\Data.cs" />
+    <Compile Include="alipay\Domain\DataEnumValue.cs" />
+    <Compile Include="alipay\Domain\DataTag.cs" />
+    <Compile Include="alipay\Domain\DateAreaModel.cs" />
+    <Compile Include="alipay\Domain\DelayInfo.cs" />
+    <Compile Include="alipay\Domain\DeliverAddress.cs" />
+    <Compile Include="alipay\Domain\DiagnoseResult.cs" />
+    <Compile Include="alipay\Domain\DiscountDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\DiscountRandomModel.cs" />
+    <Compile Include="alipay\Domain\DiscountRateModel.cs" />
+    <Compile Include="alipay\Domain\DishonestyDetailInfo.cs" />
+    <Compile Include="alipay\Domain\DishonorOrder.cs" />
+    <Compile Include="alipay\Domain\DishTag.cs" />
+    <Compile Include="alipay\Domain\DisplayConfig.cs" />
+    <Compile Include="alipay\Domain\DrawndnVo.cs" />
+    <Compile Include="alipay\Domain\DstCampRuleModel.cs" />
+    <Compile Include="alipay\Domain\EduAgeDemand.cs" />
+    <Compile Include="alipay\Domain\EduOneCardBalanceQueryResult.cs" />
+    <Compile Include="alipay\Domain\EduOneCardDepositCardQueryResult.cs" />
+    <Compile Include="alipay\Domain\EduSourceInfo.cs" />
+    <Compile Include="alipay\Domain\EduStudentInfoShareResult.cs" />
+    <Compile Include="alipay\Domain\EduWorkAddress.cs" />
+    <Compile Include="alipay\Domain\EquipmentAuthRemoveQueryBypageDTO.cs" />
+    <Compile Include="alipay\Domain\EquipmentBindInfo.cs" />
+    <Compile Include="alipay\Domain\ExClientRateVO.cs" />
+    <Compile Include="alipay\Domain\ExproductconfResponse.cs" />
+    <Compile Include="alipay\Domain\ExRefRateInfoVO.cs" />
+    <Compile Include="alipay\Domain\ExtBrand.cs" />
+    <Compile Include="alipay\Domain\ExtCategory.cs" />
+    <Compile Include="alipay\Domain\ExtendParams.cs" />
+    <Compile Include="alipay\Domain\ExtItem.cs" />
+    <Compile Include="alipay\Domain\ExtUserInfo.cs" />
+    <Compile Include="alipay\Domain\FeeRecords.cs" />
+    <Compile Include="alipay\Domain\FengdieActivity.cs" />
+    <Compile Include="alipay\Domain\FengdieActivityCreateData.cs" />
+    <Compile Include="alipay\Domain\FengdieActivityCreatePageData.cs" />
+    <Compile Include="alipay\Domain\FengdieActivityPage.cs" />
+    <Compile Include="alipay\Domain\FengdieActivitySchemaData.cs" />
+    <Compile Include="alipay\Domain\FengdieTemplate.cs" />
+    <Compile Include="alipay\Domain\Filter.cs" />
+    <Compile Include="alipay\Domain\FilterTag.cs" />
+    <Compile Include="alipay\Domain\ForbbidenTime.cs" />
+    <Compile Include="alipay\Domain\FriendListVO.cs" />
+    <Compile Include="alipay\Domain\FundDetailItemAOPModel.cs" />
+    <Compile Include="alipay\Domain\FundItemAOPModel.cs" />
+    <Compile Include="alipay\Domain\GetRuleInfo.cs" />
+    <Compile Include="alipay\Domain\GfResult.cs" />
+    <Compile Include="alipay\Domain\GoodsDetail.cs" />
+    <Compile Include="alipay\Domain\GradeDiscountPoint.cs" />
+    <Compile Include="alipay\Domain\GraphNegInfoModel.cs" />
+    <Compile Include="alipay\Domain\GroupMemberInfo.cs" />
+    <Compile Include="alipay\Domain\GroupSetting.cs" />
+    <Compile Include="alipay\Domain\IndividualInfo.cs" />
+    <Compile Include="alipay\Domain\InfoCode.cs" />
+    <Compile Include="alipay\Domain\InfoSecHitDetectItem.cs" />
+    <Compile Include="alipay\Domain\InputFieldModel.cs" />
+    <Compile Include="alipay\Domain\InsAddressee.cs" />
+    <Compile Include="alipay\Domain\InsApplication.cs" />
+    <Compile Include="alipay\Domain\InsApplicationQuery.cs" />
+    <Compile Include="alipay\Domain\InsCertificate.cs" />
+    <Compile Include="alipay\Domain\InsCertificateApiDTO.cs" />
+    <Compile Include="alipay\Domain\InsCertificatePaginationList.cs" />
+    <Compile Include="alipay\Domain\InsClaim.cs" />
+    <Compile Include="alipay\Domain\InsCoverage.cs" />
+    <Compile Include="alipay\Domain\InsCreateCertificateRequest.cs" />
+    <Compile Include="alipay\Domain\InsEndorseItem.cs" />
+    <Compile Include="alipay\Domain\InsLiability.cs" />
+    <Compile Include="alipay\Domain\InsMerchant.cs" />
+    <Compile Include="alipay\Domain\InsMktCampaignDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktCouponBaseDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktCouponCampaignDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktCouponCmpgnBaseDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktCouponConfigDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktCouponDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktFactorDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktObjectDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktPreUseCampaignDTO.cs" />
+    <Compile Include="alipay\Domain\InsMktPreUseCouponDTO.cs" />
+    <Compile Include="alipay\Domain\InsObject.cs" />
+    <Compile Include="alipay\Domain\InsPerson.cs" />
+    <Compile Include="alipay\Domain\InsPolicy.cs" />
+    <Compile Include="alipay\Domain\InsProdCoverage.cs" />
+    <Compile Include="alipay\Domain\InsProdResource.cs" />
+    <Compile Include="alipay\Domain\InsProdTag.cs" />
+    <Compile Include="alipay\Domain\InsProduct.cs" />
+    <Compile Include="alipay\Domain\InsSumInsured.cs" />
+    <Compile Include="alipay\Domain\InstallmentMetaInfo.cs" />
+    <Compile Include="alipay\Domain\InstallmentRepayPlan.cs" />
+    <Compile Include="alipay\Domain\InstallmentValue.cs" />
+    <Compile Include="alipay\Domain\InvestigCategoryData.cs" />
+    <Compile Include="alipay\Domain\InvestigCategoryResult.cs" />
+    <Compile Include="alipay\Domain\InvoiceItemContent.cs" />
+    <Compile Include="alipay\Domain\InvoiceModelContent.cs" />
+    <Compile Include="alipay\Domain\InvoiceTitleModel.cs" />
+    <Compile Include="alipay\Domain\InvoiceTradeFundItem.cs" />
+    <Compile Include="alipay\Domain\InvoiceTradeGoodsItem.cs" />
+    <Compile Include="alipay\Domain\InvoiceTradeInfo.cs" />
+    <Compile Include="alipay\Domain\ISVLogSync.cs" />
+    <Compile Include="alipay\Domain\IsvShopDishModel.cs" />
+    <Compile Include="alipay\Domain\ItemDiagnoseDetail.cs" />
+    <Compile Include="alipay\Domain\ItemDiagnoseType.cs" />
+    <Compile Include="alipay\Domain\ItemInfo.cs" />
+    <Compile Include="alipay\Domain\ItemQueryResponse.cs" />
+    <Compile Include="alipay\Domain\ItermInfo.cs" />
+    <Compile Include="alipay\Domain\KbAdvertAddChannelRequest.cs" />
+    <Compile Include="alipay\Domain\KbAdvertAdvChannelResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertAdvContent.cs" />
+    <Compile Include="alipay\Domain\KbAdvertAdvContentResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertAdvResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertAdvSingleVoucherResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCascadeCommissionInfo.cs" />
+    <Compile Include="alipay\Domain\KbAdvertChannelResponse.cs" />
+    <Compile Include="alipay\Domain\KbadvertChannelTypeResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCommissionClause.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCommissionClausePercentage.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCommissionClausePercentageResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCommissionClauseQuota.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCommissionClauseQuotaResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertCommissionClauseResponse.cs" />
+    <Compile Include="alipay\Domain\KbadvertCommissionLimit.cs" />
+    <Compile Include="alipay\Domain\KbAdvertContentCodec.cs" />
+    <Compile Include="alipay\Domain\KbAdvertContentPassword.cs" />
+    <Compile Include="alipay\Domain\KbAdvertContentPasswordModify.cs" />
+    <Compile Include="alipay\Domain\KbAdvertContentShareCode.cs" />
+    <Compile Include="alipay\Domain\KbAdvertContentShareCodeModify.cs" />
+    <Compile Include="alipay\Domain\KbAdvertContentShortLink.cs" />
+    <Compile Include="alipay\Domain\KbAdvertDealBillResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertIdentifyResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertMissionQueryResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertMissionResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertMissionSubject.cs" />
+    <Compile Include="alipay\Domain\KbAdvertModifyChannelRequest.cs" />
+    <Compile Include="alipay\Domain\KbAdvertPercentageCommissionClause.cs" />
+    <Compile Include="alipay\Domain\KbAdvertPreserveCommissionClause.cs" />
+    <Compile Include="alipay\Domain\KbAdvertQuotaCommissionClause.cs" />
+    <Compile Include="alipay\Domain\KbadvertRoleInfoResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertSettleBillResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertSpecialAdvContentModifyResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertSpecialAdvContentRequest.cs" />
+    <Compile Include="alipay\Domain\KbAdvertSubjectResponse.cs" />
+    <Compile Include="alipay\Domain\KbAdvertSubjectVoucher.cs" />
+    <Compile Include="alipay\Domain\KbAdvertSubjectVoucherResponse.cs" />
+    <Compile Include="alipay\Domain\KbadvertVoucherManual.cs" />
+    <Compile Include="alipay\Domain\KbOrderActivityModel.cs" />
+    <Compile Include="alipay\Domain\KbOrderFundsVoucherModel.cs" />
+    <Compile Include="alipay\Domain\KbOrderShopModel.cs" />
+    <Compile Include="alipay\Domain\KbOrderVoucherModel.cs" />
+    <Compile Include="alipay\Domain\Keyword.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionAdvchannelBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionAdvchannelBindModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionAdvchannelUnbindModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionAdvertPurchaseModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionAdvertQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionBillQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionCascademissionCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionChannelBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionChannelCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionChannelDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionChannelModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionMissionCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionMissionPromoteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionMissionQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionMissionSearchModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionRoleQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertCommissionSpecialadvcontentModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertDataPromotedetailBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertDataPromotedetailChannelBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertDataPromotesummaryDateBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiAdvertDataPromotesummaryQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiContentArticleCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiContentArticleDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiContentBrandstoryCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiContentBrandstoryModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiContentBrandstoryOfflineModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiContentCommentDataBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataProviderBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataProviderCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataProviderModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataWorkBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataWorkCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataWorkDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiCraftsmanDataWorkModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemDescription.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemExtitemBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemExtitemCategoryQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemExtitemCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemExtitemExistedQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemExtitemQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemExtitemUpdateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiItemStateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingAdvertisingCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingAdvertisingModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingAdvertisingOperateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingAdvertisingQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignActivityBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignActivityCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignActivityModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignActivityOfflineModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignActivityQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignBenefitSendModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignCrowdBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignCrowdCountModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignCrowdCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignCrowdDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignCrowdDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignCrowdModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignItemBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignItemQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignQrcodeQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignRecruitApplyQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignRecruitShopQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingCampaignVoucherDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataActivityBillDownloadModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataActivityReportQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataAlisisReportBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataAlisisReportQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomreportBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomreportDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomreportDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomreportQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomreportSaveModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomtagDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomtagDetailQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataCustomtagSaveModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataDishdiagnoseBatchqueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataIndicatorQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataMallDiscountQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataMallIndicatorQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataMemberReportQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataMessageDeliverModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataSmartactivityConfigModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataSmartactivityForecastModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingDataTradeHabbitQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingToolMallPointsSyncModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingToolPointsQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingToolPointsUpdateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMarketingToolPrizesendAuthModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiMemberDataOauthQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiOperationContext.cs" />
+    <Compile Include="alipay\Domain\KoubeiQualityTestCloudacptActivityQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiQualityTestCloudacptBatchQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiQualityTestCloudacptCheckresultSubmitModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiQualityTestCloudacptItemQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopDishCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopDishDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopDishModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopMallPageModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopMallPageQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopMenuCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopMenuDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopMenuModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopPicCreateModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopPicDeleteModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiShopPicModifyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiTradeItemBuyModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiTradeOrderQueryModel.cs" />
+    <Compile Include="alipay\Domain\KoubeiTradeVoucherItemTemplete.cs" />
+    <Compile Include="alipay\Domain\LabelContext.cs" />
+    <Compile Include="alipay\Domain\LabelFilter.cs" />
+    <Compile Include="alipay\Domain\LeadsQueryResponse.cs" />
+    <Compile Include="alipay\Domain\LegalRepresentativeInfo.cs" />
+    <Compile Include="alipay\Domain\LendingRecords.cs" />
+    <Compile Include="alipay\Domain\LicenseInfo.cs" />
+    <Compile Include="alipay\Domain\ListListComplexMockModel.cs" />
+    <Compile Include="alipay\Domain\ListListSmMockModel.cs" />
+    <Compile Include="alipay\Domain\LoanChargeInfo.cs" />
+    <Compile Include="alipay\Domain\LoanScheme.cs" />
+    <Compile Include="alipay\Domain\MaintainBizOrder.cs" />
+    <Compile Include="alipay\Domain\MaintainOrderStatusExtParams.cs" />
+    <Compile Include="alipay\Domain\MaintainVehicleInfo.cs" />
+    <Compile Include="alipay\Domain\MaitainShopProduct.cs" />
+    <Compile Include="alipay\Domain\Material.cs" />
+    <Compile Include="alipay\Domain\MedicalHospitalDeptInfo.cs" />
+    <Compile Include="alipay\Domain\MedicalHospitalDoctorInfo.cs" />
+    <Compile Include="alipay\Domain\MedicalHospitalInfo.cs" />
+    <Compile Include="alipay\Domain\MedicalHospitalReportList.cs" />
+    <Compile Include="alipay\Domain\MedicalSvTpCardActionInfo.cs" />
+    <Compile Include="alipay\Domain\MedicalSvTpCardBodyInfo.cs" />
+    <Compile Include="alipay\Domain\MedicalSvTpCardHeadInfo.cs" />
+    <Compile Include="alipay\Domain\MerchantApplyResultRecord.cs" />
+    <Compile Include="alipay\Domain\MerchantCard.cs" />
+    <Compile Include="alipay\Domain\MerchantInstConfig.cs" />
+    <Compile Include="alipay\Domain\MerchantMenber.cs" />
+    <Compile Include="alipay\Domain\MerchantSaleLeadsQueryBypageDTO.cs" />
+    <Compile Include="alipay\Domain\MerchantSaleLeadsQueryDTO.cs" />
+    <Compile Include="alipay\Domain\MerchantScreenHit.cs" />
+    <Compile Include="alipay\Domain\MerchantshopCommentResult.cs" />
+    <Compile Include="alipay\Domain\MerchantshopCommentStatistic.cs" />
+    <Compile Include="alipay\Domain\MergeVerifyConfig.cs" />
+    <Compile Include="alipay\Domain\MicroPayOrderDetail.cs" />
+    <Compile Include="alipay\Domain\MoreInfoDTO.cs" />
+    <Compile Include="alipay\Domain\MpPrizeInfoModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoanapplyApplyCreateModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoanapplyApplyQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoanapplyArrangementCreateModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoanapplyArrangementQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoantradeLoanarCreateModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoantradeLoanarQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoantradeLoanarRepayModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoantradeLoanrelationQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoantradeLoanschemeFullQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditLoantradeLoanschemeQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankCreditUserRoleCreateModel.cs" />
+    <Compile Include="alipay\Domain\MybankFinanceYulibaoAccountQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankFinanceYulibaoCapitalPurchaseModel.cs" />
+    <Compile Include="alipay\Domain\MybankFinanceYulibaoCapitalRansomModel.cs" />
+    <Compile Include="alipay\Domain\MybankFinanceYulibaoPriceQueryModel.cs" />
+    <Compile Include="alipay\Domain\MybankFinanceYulibaoTransHistoryQueryModel.cs" />
+    <Compile Include="alipay\Domain\MyBkAccountVO.cs" />
+    <Compile Include="alipay\Domain\NewsfeedLabelInfo.cs" />
+    <Compile Include="alipay\Domain\NewsfeedLocationInfo.cs" />
+    <Compile Include="alipay\Domain\NewsfeedMediaGiftInfo.cs" />
+    <Compile Include="alipay\Domain\NewsfeedMediaImg.cs" />
+    <Compile Include="alipay\Domain\NewsfeedMediaLinkInfo.cs" />
+    <Compile Include="alipay\Domain\NewsfeedMediaVideoInfo.cs" />
+    <Compile Include="alipay\Domain\NewsfeedWithMeInfo.cs" />
+    <Compile Include="alipay\Domain\OldComplextMockModel.cs" />
+    <Compile Include="alipay\Domain\OldListListComplexMockModel.cs" />
+    <Compile Include="alipay\Domain\OpenActivity.cs" />
+    <Compile Include="alipay\Domain\OpenApiRoyaltyDetailInfoPojo.cs" />
+    <Compile Include="alipay\Domain\OpenBatch.cs" />
+    <Compile Include="alipay\Domain\OpenItem.cs" />
+    <Compile Include="alipay\Domain\OpenPromoBudget.cs" />
+    <Compile Include="alipay\Domain\OpenPromoCamp.cs" />
+    <Compile Include="alipay\Domain\OpenPromoPrize.cs" />
+    <Compile Include="alipay\Domain\OpenPromoPrizeDimension.cs" />
+    <Compile Include="alipay\Domain\OpenPromoPrizeRelativeTime.cs" />
+    <Compile Include="alipay\Domain\OperatorInfo.cs" />
+    <Compile Include="alipay\Domain\OrderDetail.cs" />
+    <Compile Include="alipay\Domain\OrderDetailResult.cs" />
+    <Compile Include="alipay\Domain\OrderItem.cs" />
+    <Compile Include="alipay\Domain\OrderLogisticsExtInfo.cs" />
+    <Compile Include="alipay\Domain\OrderLogisticsInfo.cs" />
+    <Compile Include="alipay\Domain\OrderRefundInfo.cs" />
+    <Compile Include="alipay\Domain\OuterShopDO.cs" />
+    <Compile Include="alipay\Domain\Paragraph.cs" />
+    <Compile Include="alipay\Domain\PaymentAbilityPostbackResponse.cs" />
+    <Compile Include="alipay\Domain\PaymentAbilityQueryResponse.cs" />
+    <Compile Include="alipay\Domain\PaymentSchedule.cs" />
+    <Compile Include="alipay\Domain\PeriodInfo.cs" />
+    <Compile Include="alipay\Domain\PersonnalBankAccountInfo.cs" />
+    <Compile Include="alipay\Domain\Picture.cs" />
+    <Compile Include="alipay\Domain\PidShopInfo.cs" />
+    <Compile Include="alipay\Domain\PointAccountLog.cs" />
+    <Compile Include="alipay\Domain\PointCard.cs" />
+    <Compile Include="alipay\Domain\PreOrderResult.cs" />
+    <Compile Include="alipay\Domain\PricingVO.cs" />
+    <Compile Include="alipay\Domain\PrizeCustomMenu.cs" />
+    <Compile Include="alipay\Domain\ProdIPRelationVO.cs" />
+    <Compile Include="alipay\Domain\ProdLORelationVO.cs" />
+    <Compile Include="alipay\Domain\ProdMarkRelationVO.cs" />
+    <Compile Include="alipay\Domain\ProdRelationVO.cs" />
+    <Compile Include="alipay\Domain\ProductBaseVO.cs" />
+    <Compile Include="alipay\Domain\ProductProvider.cs" />
+    <Compile Include="alipay\Domain\ProductVOOptions.cs" />
+    <Compile Include="alipay\Domain\PromoItemInfo.cs" />
+    <Compile Include="alipay\Domain\PromoteDataModel.cs" />
+    <Compile Include="alipay\Domain\PromoteDateModel.cs" />
+    <Compile Include="alipay\Domain\PromoteDetailChannelModel.cs" />
+    <Compile Include="alipay\Domain\PromoteDetailModel.cs" />
+    <Compile Include="alipay\Domain\PromoteItemModel.cs" />
+    <Compile Include="alipay\Domain\PromoTool.cs" />
+    <Compile Include="alipay\Domain\PubChannelDTO.cs" />
+    <Compile Include="alipay\Domain\PublicBindAccount.cs" />
+    <Compile Include="alipay\Domain\PublicLabel.cs" />
+    <Compile Include="alipay\Domain\PublishChannel.cs" />
+    <Compile Include="alipay\Domain\QRcode.cs" />
+    <Compile Include="alipay\Domain\QueryDetailAopResult.cs" />
+    <Compile Include="alipay\Domain\QueryInstBillDetail.cs" />
+    <Compile Include="alipay\Domain\QueryInstBillInfo.cs" />
+    <Compile Include="alipay\Domain\QueryProvCityInfo.cs" />
+    <Compile Include="alipay\Domain\RandomDiscountDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\RechargeBill.cs" />
+    <Compile Include="alipay\Domain\RechargeModel.cs" />
+    <Compile Include="alipay\Domain\RecruitInfo.cs" />
+    <Compile Include="alipay\Domain\RecruitItemApplyData.cs" />
+    <Compile Include="alipay\Domain\RecruitShopInfo.cs" />
+    <Compile Include="alipay\Domain\RecruitTool.cs" />
+    <Compile Include="alipay\Domain\ReduceDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\ReduceInfo.cs" />
+    <Compile Include="alipay\Domain\ReduceToAmtDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\ReduceToDiscountDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\RefundDetail.cs" />
+    <Compile Include="alipay\Domain\RefundRoyaltyInfo.cs" />
+    <Compile Include="alipay\Domain\RefundRoyaltyResult.cs" />
+    <Compile Include="alipay\Domain\RefundUnfreezeResult.cs" />
+    <Compile Include="alipay\Domain\RepaymentRecords.cs" />
+    <Compile Include="alipay\Domain\ReportDataItem.cs" />
+    <Compile Include="alipay\Domain\ResetZeroDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\Retailer.cs" />
+    <Compile Include="alipay\Domain\RiskRankInfoCode.cs" />
+    <Compile Include="alipay\Domain\RoyaltyDetailInfos.cs" />
+    <Compile Include="alipay\Domain\RoyaltyInfo.cs" />
+    <Compile Include="alipay\Domain\SaleProduct.cs" />
+    <Compile Include="alipay\Domain\Scene.cs" />
+    <Compile Include="alipay\Domain\ScheduleInfo.cs" />
+    <Compile Include="alipay\Domain\SecuritydataMobileCity.cs" />
+    <Compile Include="alipay\Domain\SendRule.cs" />
+    <Compile Include="alipay\Domain\ServiceOrderInfo.cs" />
+    <Compile Include="alipay\Domain\ShopCategoryConfigInfo.cs" />
+    <Compile Include="alipay\Domain\ShopCategoryInfo.cs" />
+    <Compile Include="alipay\Domain\ShopCommentInfo.cs" />
+    <Compile Include="alipay\Domain\ShopDiscountInfo.cs" />
+    <Compile Include="alipay\Domain\ShopEquipmentBindInfo.cs" />
+    <Compile Include="alipay\Domain\ShopInfo.cs" />
+    <Compile Include="alipay\Domain\ShopSummaryQueryResponse.cs" />
+    <Compile Include="alipay\Domain\SignResultValue.cs" />
+    <Compile Include="alipay\Domain\SimpleMockModel.cs" />
+    <Compile Include="alipay\Domain\SingleDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\SingleFundDetailItemAOPModel.cs" />
+    <Compile Include="alipay\Domain\SinglePayDetail.cs" />
+    <Compile Include="alipay\Domain\SkuPropertyValue.cs" />
+    <Compile Include="alipay\Domain\SsdataDataserviceDtevalDataanalysisSendModel.cs" />
+    <Compile Include="alipay\Domain\SsdataDataserviceInfoAtlasnegQueryModel.cs" />
+    <Compile Include="alipay\Domain\SsdataDataserviceRiskAlixiaohaoQueryModel.cs" />
+    <Compile Include="alipay\Domain\SsdataDataserviceRiskDigitalidentityQueryModel.cs" />
+    <Compile Include="alipay\Domain\SsdataDataserviceRiskIpprofileQueryModel.cs" />
+    <Compile Include="alipay\Domain\SsdataDataserviceRiskRainscoreQueryModel.cs" />
+    <Compile Include="alipay\Domain\StaffDTO.cs" />
+    <Compile Include="alipay\Domain\StagedDiscountDstCampPrizeModel.cs" />
+    <Compile Include="alipay\Domain\StationDetailInfo.cs" />
+    <Compile Include="alipay\Domain\StdPublicBindAccount.cs" />
+    <Compile Include="alipay\Domain\StudentInfo.cs" />
+    <Compile Include="alipay\Domain\SubButton.cs" />
+    <Compile Include="alipay\Domain\SubMerchant.cs" />
+    <Compile Include="alipay\Domain\SupportFunction.cs" />
+    <Compile Include="alipay\Domain\Template.cs" />
+    <Compile Include="alipay\Domain\TemplateBenefitInfoDTO.cs" />
+    <Compile Include="alipay\Domain\TemplateCardLevelConfDTO.cs" />
+    <Compile Include="alipay\Domain\TemplateColumnInfoDTO.cs" />
+    <Compile Include="alipay\Domain\TemplateFieldRuleDTO.cs" />
+    <Compile Include="alipay\Domain\TemplateOpenCardConfDTO.cs" />
+    <Compile Include="alipay\Domain\TemplateStyleInfoDTO.cs" />
+    <Compile Include="alipay\Domain\Text.cs" />
+    <Compile Include="alipay\Domain\TicketDetailInfo.cs" />
+    <Compile Include="alipay\Domain\TradeFundBill.cs" />
+    <Compile Include="alipay\Domain\TradeRecord.cs" />
+    <Compile Include="alipay\Domain\UnfreezeOrderDetail.cs" />
+    <Compile Include="alipay\Domain\UserDetails.cs" />
+    <Compile Include="alipay\Domain\UserInfoAndBenefitQueryResult.cs" />
+    <Compile Include="alipay\Domain\UseRule.cs" />
+    <Compile Include="alipay\Domain\UseRuleInfo.cs" />
+    <Compile Include="alipay\Domain\UseTime.cs" />
+    <Compile Include="alipay\Domain\ValidationRule.cs" />
+    <Compile Include="alipay\Domain\ValidDateInfo.cs" />
+    <Compile Include="alipay\Domain\Video.cs" />
+    <Compile Include="alipay\Domain\Voucher.cs" />
+    <Compile Include="alipay\Domain\VoucherDescDetail.cs" />
+    <Compile Include="alipay\Domain\VoucherDetail.cs" />
+    <Compile Include="alipay\Domain\VoucherInfo.cs" />
+    <Compile Include="alipay\Domain\VoucherModifyInfo.cs" />
+    <Compile Include="alipay\Domain\VoucherTermInfo.cs" />
+    <Compile Include="alipay\Domain\VoucherUserExternalTradeInfo.cs" />
+    <Compile Include="alipay\Domain\WelfareEcoStoreInfo.cs" />
+    <Compile Include="alipay\Domain\XXXXsdasdasd.cs" />
+    <Compile Include="alipay\Domain\YLBPriceDetailInfo.cs" />
+    <Compile Include="alipay\Domain\YLBProfitDetailInfo.cs" />
+    <Compile Include="alipay\Domain\YLBTransDetailInfo.cs" />
+    <Compile Include="alipay\Domain\ZhimaAuthInfoAuthqueryModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCreditAntifraudVerifyModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCreditScoreBriefGetModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCreditScoreGetModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCreditWatchlistBriefGetModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCreditWatchlistiiGetModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCustomerCertificationCertifyModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCustomerCertificationInitializeModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaCustomerCertificationQueryModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaDataFeedbackurlQueryModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaMerchantBorrowEntityUploadModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaMerchantOrderRentCancelModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaMerchantOrderRentCompleteModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaMerchantOrderRentCreateModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaMerchantOrderRentQueryModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaMerchantTestPracticeModel.cs" />
+    <Compile Include="alipay\Domain\ZhimaRiskDetail.cs" />
+    <Compile Include="alipay\Domain\ZmWatchListDetail.cs" />
+    <Compile Include="alipay\Domain\ZmWatchListExtendInfo.cs" />
+    <Compile Include="alipay\IAopClient.cs" />
+    <Compile Include="alipay\IAopRequest.cs" />
+    <Compile Include="alipay\IAopUploadRequest.cs" />
+    <Compile Include="alipay\Jayrock\Json\BooleanObject.cs" />
+    <Compile Include="alipay\Jayrock\Json\Collections\KeyedCollection.cs" />
+    <Compile Include="alipay\Jayrock\Json\Compat.cs" />
+    <Compile Include="alipay\Jayrock\Json\Configuration\DictionarySectionHandler.cs" />
+    <Compile Include="alipay\Jayrock\Json\Configuration\ListSectionHandler.cs" />
+    <Compile Include="alipay\Jayrock\Json\Configuration\TypeListSectionHandler.cs" />
+    <Compile Include="alipay\Jayrock\Json\Diagnostics\DebugString.cs" />
+    <Compile Include="alipay\Jayrock\Json\IndentedTextWriter.cs" />
+    <Compile Include="alipay\Jayrock\Json\InternetDate.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\BufferedCharReader.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\AnyType.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\AnyImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ArrayImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\BooleanExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\BooleanImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ByteArrayExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ByteArrayImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ComponentExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ComponentImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DataRowExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DataRowViewExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DataSetExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DataTableExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DataViewExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DateTimeExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DateTimeImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DictionaryExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\DictionaryImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\EnumerableExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\EnumImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ExportAwareExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ExporterBase.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\GuidImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ImportAwareImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ImporterBase.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\ListImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\NameValueCollectionExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\NameValueCollectionImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\NumberExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\NumberImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\StringExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\Converters\StringImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\CustomTypeDescriptor.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\ExportContext.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\ExporterCollection.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\ExporterListSectionHandler.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\IExporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\IImporter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\IJsonExportable.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\IJsonImportable.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\ImportContext.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\ImporterCollection.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\ImporterListSectionHandler.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\JsonConvert.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\Conversion\JsonIgnoreAttribute.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\EmptyJsonWriter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\InvalidMemberException.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonArray.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonBoolean.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonException.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonNull.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonNumber.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonObject.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonReader.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonReaderBase.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonRecorder.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonString.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonTextReader.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonTextWriter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonToken.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonTokenClass.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonWriter.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonWriterBase.cs" />
+    <Compile Include="alipay\Jayrock\Json\Json\JsonWriterBracket.cs" />
+    <Compile Include="alipay\Jayrock\Json\UnixTime.cs" />
+    <Compile Include="alipay\Jayrock\Mask.cs" />
+    <Compile Include="alipay\Parser\AopAttribute.cs" />
+    <Compile Include="alipay\Parser\AopJsonParser.cs" />
+    <Compile Include="alipay\Parser\AopJsonReader.cs" />
+    <Compile Include="alipay\Parser\AopModelParser.cs" />
+    <Compile Include="alipay\Parser\AopXmlParser.cs" />
+    <Compile Include="alipay\Parser\EncryptParseItem.cs" />
+    <Compile Include="alipay\Parser\IAopParser.cs" />
+    <Compile Include="alipay\Parser\IAopReader.cs" />
+    <Compile Include="alipay\ResponseParseItem.cs" />
+    <Compile Include="alipay\SignItem.cs" />
+    <Compile Include="alipay\Util\AlipayEncrypt.cs" />
+    <Compile Include="alipay\Util\AlipaySignature.cs" />
+    <Compile Include="alipay\Util\AopUtils.cs" />
+    <Compile Include="alipay\Util\FileItem.cs" />
+    <Compile Include="alipay\Util\RSACryptoServiceProviderExtension.cs" />
+    <Compile Include="alipay\Util\RSAUtil.cs" />
+    <Compile Include="alipay\Util\StringUtil.cs" />
+    <Compile Include="alipay\Util\WebUtils.cs" />
+    <Compile Include="com.allinpay.syb\AppConstants.cs" />
+    <Compile Include="com.allinpay.syb\AppUtil.cs" />
+    <Compile Include="com.allinpay.syb\HttpUtil.cs" />
+    <Compile Include="com.allinpay.syb\SybWxPayService.cs" />
+    <Compile Include="dialogue.aspx.cs">
+      <DependentUpon>dialogue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dialogue.aspx.designer.cs">
+      <DependentUpon>dialogue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="function.aspx.cs">
+      <DependentUpon>function.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="function.aspx.designer.cs">
+      <DependentUpon>function.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="handler\baseHandler.aspx.cs">
+      <DependentUpon>baseHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="handler\baseHandler.aspx.designer.cs">
+      <DependentUpon>baseHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\dialogueHandler.aspx.cs">
+      <DependentUpon>dialogueHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="handler\dialogueHandler.aspx.designer.cs">
+      <DependentUpon>dialogueHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\functionHandler.aspx.cs">
+      <DependentUpon>functionHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="handler\functionHandler.aspx.designer.cs">
+      <DependentUpon>functionHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\paywayHandler.aspx.cs">
+      <DependentUpon>paywayHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="handler\paywayHandler.aspx.designer.cs">
+      <DependentUpon>paywayHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="layout\page.Master.cs">
+      <DependentUpon>page.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layout\page.Master.designer.cs">
+      <DependentUpon>page.Master</DependentUpon>
+    </Compile>
+    <Compile Include="member.aspx.cs">
+      <DependentUpon>member.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="member.aspx.designer.cs">
+      <DependentUpon>member.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\createqrcode.aspx.cs">
+      <DependentUpon>createqrcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\createqrcode.aspx.designer.cs">
+      <DependentUpon>createqrcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getallmateriallist.aspx.cs">
+      <DependentUpon>getallmateriallist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getallmateriallist.aspx.designer.cs">
+      <DependentUpon>getallmateriallist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\mass.aspx.cs">
+      <DependentUpon>mass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\mass.aspx.designer.cs">
+      <DependentUpon>mass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\masssendresult.aspx.cs">
+      <DependentUpon>masssendresult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\masssendresult.aspx.designer.cs">
+      <DependentUpon>masssendresult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\massuploadimgtexturl.aspx.cs">
+      <DependentUpon>massuploadimgtexturl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\massuploadimgtexturl.aspx.designer.cs">
+      <DependentUpon>massuploadimgtexturl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\materialmanager.aspx.cs">
+      <DependentUpon>materialmanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\materialmanager.aspx.designer.cs">
+      <DependentUpon>materialmanager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\materialpermanentadd.aspx.cs">
+      <DependentUpon>materialpermanentadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\materialpermanentadd.aspx.designer.cs">
+      <DependentUpon>materialpermanentadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\myaddressinfo.aspx.cs">
+      <DependentUpon>myaddressinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\myaddressinfo.aspx.designer.cs">
+      <DependentUpon>myaddressinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\userbaseinfo.aspx.cs">
+      <DependentUpon>userbaseinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\userbaseinfo.aspx.designer.cs">
+      <DependentUpon>userbaseinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\menu.aspx.cs">
+      <DependentUpon>menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\menu.aspx.designer.cs">
+      <DependentUpon>menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\menuaddone.aspx.cs">
+      <DependentUpon>menuaddone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\menuaddone.aspx.designer.cs">
+      <DependentUpon>menuaddone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\menuaddtwo.aspx.cs">
+      <DependentUpon>menuaddtwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\menuaddtwo.aspx.designer.cs">
+      <DependentUpon>menuaddtwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\menulist.aspx.cs">
+      <DependentUpon>menulist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\menulist.aspx.designer.cs">
+      <DependentUpon>menulist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\menueditone.aspx.cs">
+      <DependentUpon>menueditone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\menueditone.aspx.designer.cs">
+      <DependentUpon>menueditone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\menuedittwo.aspx.cs">
+      <DependentUpon>menuedittwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\menuedittwo.aspx.designer.cs">
+      <DependentUpon>menuedittwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\long2short.aspx.cs">
+      <DependentUpon>long2short.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\long2short.aspx.designer.cs">
+      <DependentUpon>long2short.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\customersend.aspx.cs">
+      <DependentUpon>customersend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\customersend.aspx.designer.cs">
+      <DependentUpon>customersend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\selectallusergroup.aspx.cs">
+      <DependentUpon>selectallusergroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\selectallusergroup.aspx.designer.cs">
+      <DependentUpon>selectallusergroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\usergroupmanager.aspx.cs">
+      <DependentUpon>usergroupmanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\usergroupmanager.aspx.designer.cs">
+      <DependentUpon>usergroupmanager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\selectcurrentusergroup.aspx.cs">
+      <DependentUpon>selectcurrentusergroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\selectcurrentusergroup.aspx.designer.cs">
+      <DependentUpon>selectcurrentusergroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\updateusergroup.aspx.cs">
+      <DependentUpon>updateusergroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\updateusergroup.aspx.designer.cs">
+      <DependentUpon>updateusergroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\moveusergroup.aspx.cs">
+      <DependentUpon>moveusergroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\moveusergroup.aspx.designer.cs">
+      <DependentUpon>moveusergroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\movecurrentusergroup.aspx.cs">
+      <DependentUpon>movecurrentusergroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\movecurrentusergroup.aspx.designer.cs">
+      <DependentUpon>movecurrentusergroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\updateuserremark.aspx.cs">
+      <DependentUpon>updateuserremark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\updateuserremark.aspx.designer.cs">
+      <DependentUpon>updateuserremark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getuserbaseinfo.aspx.cs">
+      <DependentUpon>getuserbaseinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getuserbaseinfo.aspx.designer.cs">
+      <DependentUpon>getuserbaseinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getuserlist.aspx.cs">
+      <DependentUpon>getuserlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getuserlist.aspx.designer.cs">
+      <DependentUpon>getuserlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getallmateriallistdetail.aspx.cs">
+      <DependentUpon>getallmateriallistdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getallmateriallistdetail.aspx.designer.cs">
+      <DependentUpon>getallmateriallistdetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\materialtemporaryadd.aspx.cs">
+      <DependentUpon>materialtemporaryadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\materialtemporaryadd.aspx.designer.cs">
+      <DependentUpon>materialtemporaryadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialtemporary.aspx.cs">
+      <DependentUpon>getmaterialtemporary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialtemporary.aspx.designer.cs">
+      <DependentUpon>getmaterialtemporary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\materialotherpermanentadd.aspx.cs">
+      <DependentUpon>materialotherpermanentadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\materialotherpermanentadd.aspx.designer.cs">
+      <DependentUpon>materialotherpermanentadd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialall.aspx.cs">
+      <DependentUpon>getmaterialall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialall.aspx.designer.cs">
+      <DependentUpon>getmaterialall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialpermanent.aspx.cs">
+      <DependentUpon>getmaterialpermanent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialpermanent.aspx.designer.cs">
+      <DependentUpon>getmaterialpermanent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialpermanentlist.aspx.cs">
+      <DependentUpon>getmaterialpermanentlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\getmaterialpermanentlist.aspx.designer.cs">
+      <DependentUpon>getmaterialpermanentlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\materialpermanentdelete.aspx.cs">
+      <DependentUpon>materialpermanentdelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\materialpermanentdelete.aspx.designer.cs">
+      <DependentUpon>materialpermanentdelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\materialpermanentedit.aspx.cs">
+      <DependentUpon>materialpermanentedit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\materialpermanentedit.aspx.designer.cs">
+      <DependentUpon>materialpermanentedit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\massuploadimgtext.aspx.cs">
+      <DependentUpon>massuploadimgtext.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\massuploadimgtext.aspx.designer.cs">
+      <DependentUpon>massuploadimgtext.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\massgroupsend.aspx.cs">
+      <DependentUpon>massgroupsend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\massgroupsend.aspx.designer.cs">
+      <DependentUpon>massgroupsend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\massopenidsend.aspx.cs">
+      <DependentUpon>massopenidsend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\massopenidsend.aspx.designer.cs">
+      <DependentUpon>massopenidsend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\massgroupsenddelete.aspx.cs">
+      <DependentUpon>massgroupsenddelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\massgroupsenddelete.aspx.designer.cs">
+      <DependentUpon>massgroupsenddelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\masspreview.aspx.cs">
+      <DependentUpon>masspreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\masspreview.aspx.designer.cs">
+      <DependentUpon>masspreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\massselectgroupsend.aspx.cs">
+      <DependentUpon>massselectgroupsend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\massselectgroupsend.aspx.designer.cs">
+      <DependentUpon>massselectgroupsend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\dialogue\templatemessage.aspx.cs">
+      <DependentUpon>templatemessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\dialogue\templatemessage.aspx.designer.cs">
+      <DependentUpon>templatemessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\function\morecustomerservice.aspx.cs">
+      <DependentUpon>morecustomerservice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\function\morecustomerservice.aspx.designer.cs">
+      <DependentUpon>morecustomerservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\function\customerservicemanager.aspx.cs">
+      <DependentUpon>customerservicemanager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\function\customerservicemanager.aspx.designer.cs">
+      <DependentUpon>customerservicemanager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\makeqrcode.aspx.cs">
+      <DependentUpon>makeqrcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\makeqrcode.aspx.designer.cs">
+      <DependentUpon>makeqrcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\nativepay.aspx.cs">
+      <DependentUpon>nativepay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\nativepay.aspx.designer.cs">
+      <DependentUpon>nativepay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\notify.aspx.cs">
+      <DependentUpon>notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\notify.aspx.designer.cs">
+      <DependentUpon>notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\qrcode.aspx.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\qrcode.aspx.designer.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\share.aspx.cs">
+      <DependentUpon>share.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\share.aspx.designer.cs">
+      <DependentUpon>share.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\supportjs.aspx.cs">
+      <DependentUpon>supportjs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\supportjs.aspx.designer.cs">
+      <DependentUpon>supportjs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\webpage\imagejs.aspx.cs">
+      <DependentUpon>imagejs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\webpage\imagejs.aspx.designer.cs">
+      <DependentUpon>imagejs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service\SiteConfig.cs" />
+    <Compile Include="valid.aspx.cs">
+      <DependentUpon>valid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="valid.aspx.designer.cs">
+      <DependentUpon>valid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="webpage.aspx.cs">
+      <DependentUpon>webpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="webpage.aspx.designer.cs">
+      <DependentUpon>webpage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\font_1433401008_2229297.ttf" />
+    <Content Include="fonts\font_1433401008_2229297.woff" />
+    <Content Include="layout\page.Master" />
+    <None Include="Properties\PublishProfiles\wxdemo.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{b1bb9f99-bccf-439e-9370-7cd262ff664c}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{bc94e993-5c0e-4f19-9444-e1f568d359c5}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3430</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3119/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

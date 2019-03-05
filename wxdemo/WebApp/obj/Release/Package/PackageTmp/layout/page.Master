@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="page.master.cs" Inherits="WebApp.layout.page" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>微信接口demo - <%=Page.Title %></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="/css/sm.min.css" />
+    <link href="/css/sm-extend.min.css" rel="stylesheet" />
+    <link href="/css/swiper.min.css" rel="stylesheet" />
+     <style type="text/css">
+        .content-block-title {
+            margin-top: 10px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <!-- 单个page ,第一个.page默认被展示-->
+        <div class="page">
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <%if (str1 == "active")
+                  {%>
+                <a class="icon icon-me pull-left open-panel" href="/member.aspx"></a>
+                <%}
+                  else
+                  {%>
+                <button class="button button-link button-nav pull-left" onclick="window.history.go(-1)">
+                    <span class="icon icon-left"></span>
+                    返回
+                </button>
+                <%} %>
+                <h1 class="title"><%=Page.Title %></h1>
+            </header>
+
+            <!-- 工具栏 -->
+            <nav class="bar bar-tab">
+                <a class="tab-item external <%=str1 %>" href="/index.aspx">
+                    <span class="icon icon-home"></span>
+                    <span class="tab-label">首页</span>
+                </a>
+                <a class="tab-item external <%=str2 %>" href="/dialogue.aspx">
+                    <span class="icon icon-emoji"></span>
+                    <span class="tab-label">对话</span>
+                </a>
+                <a class="tab-item external <%=str3 %>" href="/webpage.aspx">
+                    <span class="icon icon-browser"></span>
+                    <span class="tab-label">网页</span>
+                </a>
+                <a class="tab-item external <%=str4 %>" href="/function.aspx">
+                    <span class="icon icon-settings"></span>
+                    <span class="tab-label">功能</span>
+                </a>
+                <a class="tab-item external <%=str5 %>" href="/member.aspx">
+                    <span class="icon icon-me"></span>
+                    <span class="tab-label">我的</span>
+                </a>
+            </nav>
+
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <asp:ContentPlaceHolder ID="body" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='/js/zepto.min.js' charset='utf-8'></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type='text/javascript' src='/js/sm.min.js' charset='utf-8'></script>
+    <script src="/js/sm-extend.min.js"></script>
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

@@ -1,0 +1,15 @@
+G:\mycase\wxdemo\wxdemo\Utility\bin\Release\Utility.dll
+G:\mycase\wxdemo\wxdemo\Utility\bin\Release\Utility.pdb
+G:\mycase\wxdemo\wxdemo\Utility\obj\Release\Utility.dll
+G:\mycase\wxdemo\wxdemo\Utility\obj\Release\Utility.pdb
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\Utility.dll
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\Utility.pdb
+E:\mycase\wxdemo\wxdemo\Utility\obj\Release\Utility.dll
+E:\mycase\wxdemo\wxdemo\Utility\obj\Release\Utility.pdb
+E:\mycase\wxdemo\wxdemo\Utility\obj\Release\Utility.csprojResolveAssemblyReference.cache
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\Model.dll
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\Newtonsoft.Json.dll
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\EntityFramework.dll
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\Model.pdb
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\EntityFramework.xml
+E:\mycase\wxdemo\wxdemo\Utility\bin\Release\zh-Hans\EntityFramework.resources.dll
